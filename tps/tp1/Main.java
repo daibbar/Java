@@ -42,13 +42,27 @@ public class Main {
     }
 
     public static void Q4() {
+        Scanner scanner = new Scanner(System.in);
+        int nbr;
+        int factor;
+
+        nbr = scanner.nextInt();
+        if (nbr == 0){
+            System.out.printf("0! = 1\n");
+        }
+
+        factor = 1;
+        for (int i = 1; i <= nbr; i++){
+            factor *= i;
+        }
+        System.out.printf("%d! = %d\n", nbr, factor);
 
     }
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
         int question;
 
-        System.out.println("choisir une question");
+        System.out.printf("choisir une questtttttttion");
         question = scanner.nextInt();
         switch (question){
             case 1:
@@ -59,6 +73,9 @@ public class Main {
                 break;
             case 3:
                 Q3();
+                break;
+            case 4:
+                Q4();
                 break;
         }
 
