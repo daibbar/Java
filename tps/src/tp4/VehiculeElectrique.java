@@ -14,6 +14,22 @@ public class VehiculeElectrique extends Vehicule{
         this.capaciteBatterie = capaciteBatterie;
     }
 
+    public void setNiveauBatterie (double niveauBatterie) {
+        this.niveauBatterie = niveauBatterie;
+    }
+
+    public void setTempsRecharge (int tempsRecharge) {
+        this.tempsRecharge = tempsRecharge;
+    }
+
+    public void setCapaciteBatterie (int capaciteBatterie) {
+        this.capaciteBatterie = capaciteBatterie;
+    }
+
+    public double getNiveauBatterie () {return niveauBatterie;}
+    public int getTempsRecharge () {return tempsRecharge;}
+    public int getCapaciteBatterie () {return capaciteBatterie;}
+
     public double calculerAutonomie() {
         return niveauBatterie * 100 / (super.getConsommationBase() * 0.8);
 
@@ -23,7 +39,7 @@ public class VehiculeElectrique extends Vehicule{
         return (super.getCapacite() * this.calculerAutonomie()) / (capaciteBatterie * tempsRecharge / 60);
     }
 
-    public double calculerTempsRecharge() {
+    public double calculerTempsRechargeReel() {
         return tempsRecharge * (1 - niveauBatterie / capaciteBatterie);
     }
 }

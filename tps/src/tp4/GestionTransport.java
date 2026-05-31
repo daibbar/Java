@@ -17,8 +17,8 @@ public class GestionTransport {
         vehiculeElectriques.add(new VehiculeElectrique("CITY-22", 2, 10.0, 40, 20, 8));
         
         
-        for (VehiculeElectrique vehiculeElectrique : vehiculeElectriques) {
-
+        for (VehiculeThermique vehicule: vehiculeThermiques ) {
+            
         }
     }
     

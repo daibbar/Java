@@ -5,7 +5,6 @@ public abstract class Vehicule {
     private int capacite;
     private double consommationBase;
 
-    
     public abstract double calculerAutonomie();
     public abstract double calculerEfficacite();
 
@@ -38,6 +37,4 @@ public abstract class Vehicule {
         this.capacite = capacite;
         this.consommationBase = consommationBase;
     }
-
-
 }
